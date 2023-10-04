@@ -13,12 +13,13 @@ class AnswerButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         ElevatedButton(
           onPressed: onTap,
           style: ElevatedButton.styleFrom(
             padding: const EdgeInsets.symmetric(
-              vertical: 10,
+              vertical: 17,
               horizontal: 40,
             ),
             backgroundColor: const Color.fromARGB(255, 33, 1, 95),
