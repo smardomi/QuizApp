@@ -35,8 +35,9 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
     final currentQuestion = questions[currentQuestionIndex];
 
     return SizedBox(
+      width: double.infinity,
       child: Container(
-        margin: const EdgeInsets.all(60),
+        margin: const EdgeInsets.all(40),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -51,7 +52,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30),
-            ...currentQuestion.getShuffledAnswers().map((answer) {
+            ...currentQuestion.shuffledAnswers.map((answer) {
               return AnswerButton(
                 answerText: answer,
                 onTap: () {
